@@ -24,3 +24,11 @@ tar xzf "stake-$VERSION-$PLATFORM.tar.gz"
 cd stake*
 ./stake
 ```
+
+# what does it do?
+
+Each time `./stake` is run, we
+
+* do a HEAD call to the snow stake jpg
+* compare the etag of the HEAD call to the last call we made
+* if the etag has changed, save the jpg in the format `2017-10-13-05-56.jpg`
