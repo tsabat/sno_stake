@@ -4,12 +4,14 @@ GEM
     httparty (0.15.6)
       multi_xml (>= 0.5.2)
     multi_xml (0.6.0)
+    rake (12.1.0)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   httparty
+  rake
 
 BUNDLED WITH
    1.15.4

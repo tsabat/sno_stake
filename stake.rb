@@ -20,7 +20,7 @@ IO.write(CURRENT_ETAG, etag)
 
 body = HTTParty.get(URL).response.body
 
-current_date = DateTime.now.strftime('%Y-%M-%d-%H-%M')
+current_date = DateTime.now.strftime('%Y-%m-%d-%H-%M')
 file_name = "#{current_date}.jpg"
 puts "file change.  saving to #{file_name}"
 
