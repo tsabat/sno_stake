@@ -56,8 +56,8 @@ chmod +x /opt/stake/shoot_stake.sh
 
 ### edit your cron
 
-to look like this to make it run every minute
+to look like this to make it run every 10th minute
 
 ```
-* * * * * * /opt/stake/shoot_stake.sh
+*/10 * * * * /opt/stake/shoot_stake.sh
 ```
