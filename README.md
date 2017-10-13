@@ -32,3 +32,32 @@ Each time `./stake` is run, we
 * do a HEAD call to the snow stake jpg
 * compare the etag of the HEAD call to the last call we made
 * if the etag has changed, save the jpg in the format `2017-10-13-05-56.jpg`
+
+# what about cron?
+
+Assuming you untar'd the code above in `/opt/stake/stake-1.0.0-osx`, you'd 
+
+### create a controller file
+
+create a script in `/opt/stake` called `shoot_stake.sh` which looks like this:
+
+```
+#!/bin/bash
+
+cd /opt/stake/stake-1.0.0-osx
+./stake
+```
+
+### make `stake.sh` executable
+
+```
+chmod +x /opt/stake/shoot_stake.sh
+```
+
+### edit your cron
+
+to look like this to make it run every minute
+
+```
+* * * * * * /opt/stake/shoot_stake.sh
+```
